@@ -13,11 +13,31 @@ class ViewController: UIViewController {
     @IBOutlet weak var imageView:  UIImageView!
     
     @IBAction func buttonUpload(_ sender: UIButton) {
-        print("Button Clicked")
+        
+        loadingIndicator.isHidden = false
+        
+        if textfield1.text!.isEmpty {
+            loadingIndicator.isHidden = true
+            showAlert(message: "Enter textField 1 content")
+        } else if textfield2.text!.isEmpty {
+            loadingIndicator.isHidden = true
+            showAlert(message: "Enter textField 2 content")
+        } else  {
+            loadingIndicator.isHidden = false
+            // add api call
+        }
+        
     }
+    
+    @IBOutlet weak var textfield1: UITextField!
+    
+    @IBOutlet weak var textfield2: UITextField!
+    
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadingIndicator.isHidden = true
         setupNotification()
     }
     
@@ -50,8 +70,12 @@ class ViewController: UIViewController {
         super.viewDidAppear(animated)
         self.fetchData()
         
-        
-        
+    }
+    
+    func showAlert(message: String) {
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
 }

@@ -16,31 +16,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z9K-kM-hK1">
-                                <rect key="frame" x="20" y="167" width="374" height="292"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Z9K-kM-hK1">
+                                <rect key="frame" x="64" y="189" width="286" height="265"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="265" id="BAh-In-VgP"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Vu-XB-WRr" userLabel="Upload Image">
-                                <rect key="frame" x="108" y="549" width="199" height="46"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Vu-XB-WRr" userLabel="Upload Image">
+                                <rect key="frame" x="64" y="667" width="286" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Upload"/>
                                 <connections>
                                     <action selector="buttonUpload:" destination="BYZ-38-t0r" eventType="touchUpInside" id="svO-gd-20G"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Text 1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pFh-0E-2mw">
+                                <rect key="frame" x="64" y="524" width="286" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Text 2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kmb-go-PUO">
+                                <rect key="frame" x="64" y="593" width="286" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="yvD-VU-UJh">
+                                <rect key="frame" x="197" y="773" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0Vu-XB-WRr" secondAttribute="trailing" constant="20" id="1yT-JP-zTI"/>
-                            <constraint firstItem="Z9K-kM-hK1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="JdL-4l-Tiv"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0Vu-XB-WRr" secondAttribute="bottom" constant="178" id="U3S-DU-S56"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Z9K-kM-hK1" secondAttribute="bottom" constant="249" id="csA-p7-RK7"/>
-                            <constraint firstItem="Z9K-kM-hK1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="w9Z-Bb-I10"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Z9K-kM-hK1" secondAttribute="trailing" constant="20" id="xdY-PK-aqq"/>
+                            <constraint firstItem="Z9K-kM-hK1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0Bz-5P-nqD"/>
+                            <constraint firstItem="pFh-0E-2mw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="64" id="0nI-iu-hsM"/>
+                            <constraint firstItem="Kmb-go-PUO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="64" id="1p3-Hq-ktl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Z9K-kM-hK1" secondAttribute="trailing" constant="64" id="6U9-92-VlH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0Vu-XB-WRr" secondAttribute="trailing" constant="64" id="BTM-tU-t6X"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pFh-0E-2mw" secondAttribute="bottom" constant="304" id="DWI-E4-kS8"/>
+                            <constraint firstItem="Z9K-kM-hK1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="145" id="J2i-Nb-zxc"/>
+                            <constraint firstItem="Kmb-go-PUO" firstAttribute="top" secondItem="pFh-0E-2mw" secondAttribute="bottom" constant="35" id="NdT-ke-vHF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pFh-0E-2mw" secondAttribute="trailing" constant="64" id="TRU-wW-xGV"/>
+                            <constraint firstItem="yvD-VU-UJh" firstAttribute="top" secondItem="0Vu-XB-WRr" secondAttribute="bottom" constant="75" id="UUQ-RN-FhZ"/>
+                            <constraint firstItem="0Vu-XB-WRr" firstAttribute="top" secondItem="Kmb-go-PUO" secondAttribute="bottom" constant="40" id="bRj-Ya-UmO"/>
+                            <constraint firstItem="Z9K-kM-hK1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="64" id="dI2-06-igG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Kmb-go-PUO" secondAttribute="trailing" constant="64" id="ewh-h2-L5E"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yvD-VU-UJh" secondAttribute="trailing" constant="197" id="geD-bg-Yfy"/>
+                            <constraint firstItem="0Vu-XB-WRr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="64" id="jfp-Tn-xW5"/>
+                            <constraint firstItem="yvD-VU-UJh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="197" id="weN-Ua-Wtz"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="Z9K-kM-hK1" id="aP9-U9-NJZ"/>
+                        <outlet property="loadingIndicator" destination="yvD-VU-UJh" id="3Qp-Yx-3vx"/>
+                        <outlet property="textfield1" destination="pFh-0E-2mw" id="JLn-8l-nqL"/>
+                        <outlet property="textfield2" destination="Kmb-go-PUO" id="tzY-mP-t12"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
